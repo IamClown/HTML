@@ -1,0 +1,98 @@
+    // 1
+    var num =1;
+    var obj = {
+        num : 2,
+        fn : (function () {
+            this.num *= 2;
+            num +=3;
+            var num =1;
+            return function () {
+                num +=2;
+                this.num +=2
+                console.log(++num)
+            }
+        })()
+    };
+    var f= obj.fn;
+    f();
+    obj.fn();
+    console.log(window.num,obj.num)//--->4 7 4 4；
+
+
+
+
+    //2(√)
+    var name = "珠峰";//--->"中国"
+    var age = 5000;
+    (function (name,age) {
+
+        this.name = "中国";
+        arguments[1] = 8;
+        return function () {
+            console.log(name);--->"珠峰"
+            console.log(age);//--->"8"
+        }
+    })(name,age)();
+    console.log(name,age);//-->"中国"，5000
+
+
+
+    // 3（√）												var f = function(n){ console.log(n + i++);}
+    var i = 1;//-->2-->3-->4-->5
+    function fn() {
+        return function (n) {
+            console.log(n + i++);//-->11
+        }
+    }
+    var f = fn();//不销毁作用域
+    f(10);//输出11
+    fn()(10);//输出12
+    f(20);//输出23
+    fn()(20);//输出24
+
+
+    //4.（√）
+    var a = 9;
+    function ss() {
+        a = 0;
+        return function (b) {
+            return b + (a++)
+        }
+    }
+    var f = ss();
+    var m = f(5);//
+    console.log(m);//输出5 此时a变成1
+    var n = ss()(5);
+    console.log(n);//输出5 此时a变成1
+    var x = f(5);
+    console.log(x);//输出6 此时a变成2
+    console.log(a);//输出2
+    ---
+    // 5（√）
+    var i =1 ;
+    function fn(i){
+        return function (n){
+            console.log(n+(++i))
+        }
+    }
+    var f = fn(2);
+    f(3)//输出6 此时fn中的i变成3
+    fn(5)(6)//输出12
+    fn(7)(8)//输出16  此时fn中的i变成8
+    f(4)//输出13
+
+    // 6（√）
+
+    var i =2//---》4
+    function fn (){
+        i +=2
+        return function (n){
+            console.log(n+(--n))
+        }
+    }
+    var f =fn();
+    f();--->NaN
+    f(3)--->5
+    fn()(2);--->3
+    fn()(3);--->5
+    f(4)--->7

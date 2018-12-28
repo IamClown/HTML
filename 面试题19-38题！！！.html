@@ -1,0 +1,366 @@
+<!DOCTYPE html><html><head><title>面试题19-38题</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h2 id="面试题19-38题">面试题19-38题</h2>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#面试题19-38题">面试题19-38题</a><ul>
+<li><ul>
+<li><a href="#19至少写出3种css3新增的属性">19.至少写出3种css3新增的属性?</a></li>
+<li><a href="#20如何用css绘制一个三角不允许使用图片">20.如何用css绘制一个三角(不允许使用图片)？</a></li>
+<li><a href="#21元素在不同的浏览器中默认样式不尽相同通常如何解决">21.元素在不同的浏览器中默认样式不尽相同，通常如何解决？</a></li>
+<li><a href="#22position-display-分别都有什么值">22、position display 分别都有什么值？</a></li>
+<li><a href="#23列举三项transform的效果">23、列举三项transform的效果？</a></li>
+<li><a href="#24列举三项html5有那些新特征">24、列举三项html5有那些新特征？</a></li>
+<li><a href="#25displaynone-和visibilityhidden的区别">25.display:none 和visibility:hidden的区别？</a></li>
+<li><a href="#26css选择符有哪些哪些属性可以继承优先级算法如何计算css3新增伪类有哪些">26.css选择符有哪些？哪些属性可以继承？优先级算法如何计算？css3新增伪类有哪些？</a></li>
+<li><a href="#27对bfc规范的理解">27.对BFC规范的理解？</a></li>
+<li><a href="#28html与xhtml-二者有什么区别">28.HTML与XHTML 二者有什么区别？</a></li>
+</ul>
+</li>
+<li><a href="#css常见面试题汇总">css常见面试题汇总</a><ul>
+<li><a href="#1你做的页面在哪些流览器测试过这些浏览器的内核分别是什么">1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</a></li>
+<li><a href="#2每个html文件里开头都有个很重要的东西doctype知道这是干什么的吗">2、每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？</a></li>
+<li><a href="#3quirks模式是什么它和standards模式有什么区别">3.Quirks模式是什么？它和Standards模式有什么区别？</a></li>
+<li><a href="#4divcss的布局较table布局有什么优点">4.div+css的布局较table布局有什么优点？</a></li>
+<li><a href="#5img的alt与title有何异同-strong与em的异同">5、img的alt与title有何异同？ strong与em的异同？</a></li>
+<li><a href="#6你能描述一下渐进增强和优雅降级之间的不同吗">6.你能描述一下渐进增强和优雅降级之间的不同吗?</a></li>
+<li><a href="#7为什么利用多个域名来存储网站资源会更有效">7、为什么利用多个域名来存储网站资源会更有效？</a></li>
+<li><a href="#8请谈一下你对网页标准和标准制定机构重要性的理解w3c规范">8、请谈一下你对网页标准和标准制定机构重要性的理解？(W3C规范)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h4 id="19至少写出3种css3新增的属性">19.至少写出3种css3新增的属性?</h4>
+
+<p><strong>1.CSS3边框：</strong> <br>
+border-radius：CSS3圆角边框。在 CSS2 中添加圆角矩形需要技巧，我们必须为每个圆角使用不同的图片，在 CSS3 中，创建圆角是非常容易的，在 CSS3 中，border-radius 属性用于创建圆角。border：2px solid; <br>
+box-shadow：CSS3边框阴影。在 CSS3 中，box-shadow 用于向方框添加阴影。box-shadow:10px 10px 5px #888888; <br>
+border-image：CSS3边框图片。通过 CSS3 的 border-image 属性，您可以使用图片来创建边框。border-image：url(border.png) 30 30 round; <br>
+<strong>2.CSS3背景：</strong> <br>
+background-size： 属性规定背景图片的尺寸。在 CSS3 之前，背景图片的尺寸是由图片的实际尺寸决定的。在 CSS3 中，可以规定背景图片的尺寸，这就允许我们在不同的环境中重复使用背景图片。您能够以像素或百分比规定尺寸。如果以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。 <br>
+background-origin ：属性规定背景图片的定位区域。背景图片可以放置于 content-box、padding-box 或 border-box 区域。 <br>
+<strong>3.CSS3文字效果：</strong> <br>
+text-shadow：在 CSS3 中，text-shadow 可向文本应用阴影。text-shadow:5px 5px 5px #FFFFFF; <br>
+word-wrap :单词太长的话就可能无法超出某个区域，允许对长单词进行拆分，并换行到下一行：p{word-wrap:break-word;} <br>
+<strong>4.CSS3 2D转换：</strong> <br>
+transform：通过 CSS3 转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸。 <br>
+translate()：元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：transform：translate（50px,100px）;值 translate(50px,100px) 把元素从左侧移动 50 像素，从顶端移动 100 像素。 <br>
+rotate()：元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。transform:rotate(30deg);值 rotate(30deg) 把元素顺时针旋转 30 度。 <br>
+scale():元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：transform:scale(2,4);值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。 <br>
+skew():元素转动给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：transform:skew(30deg,20deg);值 skew(30deg,20deg) 围绕 X 轴把元素转动 30 度，围绕 Y 轴转动 20 度。 <br>
+matrix() : <br>
+matrix() 方法把所有 2D 转换方法组合在一起。 <br>
+matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。 <br>
+<strong>5.CSS3 3D转换：</strong> <br>
+rotateX()：元素围绕其 X 轴以给定的度数进行旋转。transform：rotateX(120deg); <br>
+rotateY()：元素围绕其 Y 轴以给定的度数进行旋转。transform：rotateY(120deg); <br>
+<strong>6.CSS3 过渡：</strong>当元素从一种样式变换为另一种样式时为元素添加效果。 <br>
+<strong>7.CSS3动画：</strong>通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。 <br>
+<strong>8.CSS3多列：</strong> <br>
+column-count：属性规定元素应该被分隔的列数。 <br>
+column-gap：属性规定列之间的间隔。 <br>
+column-rule ：属性设置列之间的宽度、样式和颜色规则。 <br>
+<strong>9.CSS3用户界面：</strong> <br>
+resize：属性规定是否可由用户调整元素尺寸。 <br>
+box-sizing：属性允许您以确切的方式定义适应某个区域的具体内容。 <br>
+outline-offset ：属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。</p>
+
+
+
+<h4 id="20如何用css绘制一个三角不允许使用图片">20.如何用css绘制一个三角(不允许使用图片)？</h4>
+
+<p><code>&lt;style type="text/css"&gt;</code> <br>
+        .trangle{ <br>
+            width: 0; <br>
+            border-width: 100px 100px 100px 100px; <br>
+            border-style: solid; <br>
+            border-color: transparent transparent red transparent; <br>
+        } <br>
+    <code>&lt;/style&gt;</code></p>
+
+<p><code>&lt;div class="trangle"&gt;</code></p>
+
+<p>border-width 边框线宽度 <br>
+border-style 边框线的类型 solid 实线 dashed 虚线 dotted 点状线 <br>
+border-color 颜色  需要什么方向 保留当前方向的颜色 其他方向为透明</p>
+
+
+
+<h4 id="21元素在不同的浏览器中默认样式不尽相同通常如何解决">21.元素在不同的浏览器中默认样式不尽相同，通常如何解决？</h4>
+
+<p>各浏览器默认的样式不一样，比如 h 元素的 margin、字号，列表元素的缩进是 margin 还是 padding 等。需要先把这些默认样式覆盖掉，也叫初始化或 Reset。建议用 YUI 的 Reset CSS，应该是目前比较全的了。</p>
+
+<p>各浏览器对同一个属性的理解不一样或 bug，比如最烦人的 font-family，这个多找相关的文章看看，一般可以总结出来一个比较好的解决方案。针对 IE 的 bug，万不得已可以用 hack……某个属性浏览器压根不支持，这个就需要积累了。</p>
+
+<p>开发的时候最好在 Chrome 下进行，然后在 IE6 下调整一下</p>
+
+<p>因为各个浏览器的默认样式并不一致, 所以首先肯定要 Reset CSS. 最基本的例如 * { margin: 0; padding: 0; border: 0; }; 其次如果代码写的很规范的话 (当然前提是并非 CSS3), 其实兼容性问题即使是在 IE6 下也并不会很严重, 只要多加一些 zoom: 1; overflow: hidden; 之类的就可以解决.</p>
+
+<h4 id="22position-display-分别都有什么值">22、position display 分别都有什么值？</h4>
+
+<p><strong>position属性取值</strong>：static(默认)、relative、absolute、fixed、inherit。</p>
+
+<blockquote>
+  <ul><li><p>1、postision：static；始终处于文档流给予的位置。看起来好像没有用，但它可以快速取消定位，让top，right，bottom，left的值失效。在切换的时候可以尝试这个方法。</p></li>
+  <li><p>2、除了static值，在其他三个值的设置下，z-index才会起作用。（确切地说z-index只在定位元素上有效） <br>
+  -3、position：relative和absolute都可以用于定位，区别在于前者的div还属于正常的文档流，后者已经是脱离了正常文档流，不占据空间位置，不会将父类撑开。定位原点relative是相对于它在正常流中的默认位置偏移，它原本占据的空间任然保留；absolute相对于第一个position属性值不为static的父类。所以设置了position：absolute，其父类的该属性值要注意，而且overflow：hidden也不能乱设置，因为不属于正常文档流，不会占据父类的高度，也就不会有滚动条。 <br>
+  -4、position：fixed 旧版本IE不支持，定位原点相对于浏览器窗口，而且不能变。常用于header，footer，或者一些固定的悬浮div，随滚动条滚动又稳定又流畅，比JS好多了。fixed可以有很多创造性的布局和作用，兼容性是问题。 <br>
+  -5、position：inherit。规定从父类继承position属性的值。但是任何版本的IE都不支持该属性值。</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>display属性取值</strong>：none、inline、inline-block、block、flex、inherit。</p>
+
+<blockquote>
+  <ul><li><p>1、display属性规定元素应该生成的框的类型。文档内任何元素都是框，块框或行内框。</p></li>
+  <li><p>2、display：none和visiability：hidden都可以隐藏div，区别有点像absolute和relative，前者不占据文档的空间，后者还是占据文档的位置。</p></li>
+  <li><p>3 、display：inline和block，又叫行内元素和块级元素。表现出来的区别就是block独占一行，在浏览器中通常垂直布局，可以用margin来控制块级元素之间的间距；而inline以水平方式布局，垂直方向的margin和padding都是无效的，大小跟内容一样，且无法设置宽高。inline就像塑料袋，内容怎么样，就长得怎么样；block就像盒子，有固定的宽和高。</p></li>
+  <li><p>4、inline-block就介于两者之间，为行内款块素</p></li>
+  <li><p>5、display: flex 意为”弹性盒布局模型”，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为flex布局。设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。采用flex布局的元素，称为flex容器。它的所有子元素自动成为容器成员，称为flex项目（flex item）</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="23列举三项transform的效果">23、列举三项transform的效果？</h4>
+
+<p>缩放（scale）角度旋转（rotate ）位移（translate）skew（倾斜旋转）</p>
+
+
+
+<h4 id="24列举三项html5有那些新特征">24、列举三项html5有那些新特征？</h4>
+
+<blockquote>
+  <ul><li><p>拖拽释放(Drag and drop) API（应用程序接口）</p></li>
+  <li><p>语义化更好的内容标签（header,nav,footer,aside,article,section）</p></li>
+  <li><p>音频、视频API(audio,video)</p></li>
+  <li><p>画布(Canvas) API</p></li>
+  <li><p>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；</p></li>
+  <li><p>sessionStorage（会话） 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。</p></li>
+  <li><p>表单控件， <br>
+  tel：电话号码 <br>
+  url：网页的URL <br>
+  search：搜索引擎 <br>
+  chrome下输入文字后，会多出一个关闭的X <br>
+  range：特定范围内的数值选择 <br>
+  min、max、step(步数) <br>
+  例子： 用js来显示当前数值 <br>
+  number：只能包含数字的输入框 <br>
+  输入框末尾有两个箭头 上为加 下为减 <br>
+  color：颜色选择器 <br>
+  点击显示颜色版 <br>
+  datetime：显示完整日期 <br>
+  类似select选择样式 <br>
+  datetime-local：显示完整日期，不包含时区 <br>
+  time：显示时间，不含时区 <br>
+  date：显示日期{年月日} <br>
+  week：显示周{年月日周} <br>
+  mouth：显示月{年月} <br>
+  file：上传文件</p></li>
+  <li><p>新的技术webworker, websocket, Geolocation</p>
+  
+  <ul><li><p>webworker：为浏览器端JavaScript开创了一种新的运行模式，使之能够在另外的线程中创建新的运行环境，以便使JavaScript - 能够在后台做一些费时的处理</p></li>
+  <li><p>websocket：为web应用程序客户端和服务端之间（注意是客户端服务端）提供了一种全双工通信机制。</p></li>
+  <li><p>Geolocation：提供了确定用户位置的功能，借助这个特性能够开发基于位置信息的应用。</p></li>
+  </ul>
+  
+  </li></ul></blockquote>
+
+<h4 id="25displaynone-和visibilityhidden的区别">25.display:none 和visibility:hidden的区别？</h4>
+
+<p>答：visibility: hidden—-将元素隐藏，但是在网页中该占的位置还是占着。 <br>
+display: none—-将元素的显示设为无，即在网页中不占任何的位置。</p>
+
+<h4 id="26css选择符有哪些哪些属性可以继承优先级算法如何计算css3新增伪类有哪些">26.css选择符有哪些？哪些属性可以继承？优先级算法如何计算？css3新增伪类有哪些？</h4>
+
+<p>答：标签选择器，通配符选择器，类选择器，ID选择器，后代选择器，子代选择器，相邻兄弟选择器，兄弟选择器，not选择器，nth-child选择器，伪元素选择器， <br>
+CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？CSS新增了哪些特性？  <br>
+1)      id选择器(# myid) <br>
+2)      类选择器(.myclassname) <br>
+3)      标签选择器(div, h1, p) <br>
+4)      相邻选择器(h1 + p) <br>
+5)      子选择器(ul &gt; li) <br>
+6)      后代选择器(li a) <br>
+7)      通配符选择器( * ) <br>
+8)      属性选择器(a[rel = “external”]) <br>
+9)      伪类选择器(a: hover, li:nth-child) <br>
+可继承的样式： <br>
+1)      font-size <br>
+2)      font-family <br>
+3)      color <br>
+4)      text-indent <br>
+不可继承的样式： <br>
+1)      border <br>
+2)      padding <br>
+3)      margin <br>
+4)      width <br>
+5)      height <br>
+优先级算法： <br>
+1)      优先级就近原则，同权重情况下样式定义最近者为准; <br>
+2)      载入样式以最后载入的定位为准; <br>
+3)      3.!important &gt;  id &gt; class &gt; tag <br>
+4)      important 比 内联优先级高，但内联比 id 要高 <br>
+CSS3新增伪类举例： <br>
+1)      p:first-of-type  选择属于其父元素的首个 </p><p> 元素的每个 </p><p> 元素。 <br>
+2)      p:last-of-type   选择属于其父元素的最后 </p><p> 元素的每个 </p><p> 元素。 <br>
+3)      p:only-of-type  选择属于其父元素唯一的 </p><p> 元素的每个 </p><p> 元素。 <br>
+4)      p:only-child     选择属于其父元素的唯一子元素的每个 </p><p> 元素。 <br>
+5)      p:nth-child(2)  选择属于其父元素的第二个子元素的每个 </p><p> 元素。 <br>
+6)      :enabled :disabled 控制表单控件的禁用状态。 <br>
+7)      :checked         单选框或复选框被选中。 <br>
+CSS3有哪些新特性？ <br>
+1)    CSS3实现圆角（border-radius），阴影（box-shadow）， <br>
+2)    对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform） <br>
+3)    transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);// 旋转,缩放,定位,倾斜 <br>
+4)    增加了更多的CSS选择器  多背景 rgba  <br>
+5)    在CSS3中唯一引入的伪元素是 ::selection. <br>
+6)    媒体查询，多栏布局 <br>
+7)    border-image</p>
+
+
+
+<h4 id="27对bfc规范的理解">27.对BFC规范的理解？</h4>
+
+<p>BFC 即 Block Formatting Contexts (块级格式化上下文)，它是指一个独立的块级渲染区域，只有块级参与，该区域拥有一套渲染规则来约束块级盒子的布局，具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。</p>
+
+<p>通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。</p>
+
+<h4 id="28html与xhtml-二者有什么区别">28.HTML与XHTML 二者有什么区别？</h4>
+
+<p>它们最主要的不同： <br>
+一个是功能上的差别 <br>
+      主要是XHTML可兼容各大浏览器、手机以及PDA，并且浏览器也能快速正确地编译网页。 <br>
+    1）.XHTML 元素必须被正确地嵌套。 <br>
+    错误：<code>&lt;p&gt;&lt;span&gt;</code>this is example.<code>&lt;/p&gt;&lt;/span&gt;</code> <br>
+    正确：<code>&lt;p&gt;&lt;span&gt;</code>this is example.<code>&lt;/span&gt;&lt;/p&gt;</code></p>
+
+<p>2）.XHTML 元素必须被关闭。 <br>
+    错误：<code>&lt;p&gt;</code>this is example. <br>
+    正确：<code>&lt;p&gt;</code>this is example.<code>&lt;/p&gt;</code></p>
+
+<p>3）.标签名必须用小写字母。 <br>
+   错误：<code>&lt;P&gt;</code>this is example.<code>&lt;P&gt;</code> <br>
+   正确：<code>&lt;p&gt;</code>this is example.<code>&lt;/p&gt;</code> <br>
+    3.1空标签也必须被关闭 <br>
+    错误：<code>&lt;br&gt;</code> <br>
+    正确：<code>&lt;br/&gt;</code></p>
+
+<p>4).XHTML 文档必须拥有根元素。 <br>
+   所有的 XHTML 元素必须被嵌套于  根元素中。</p>
+
+
+
+<h3 id="css常见面试题汇总">css常见面试题汇总</h3>
+
+<h4 id="1你做的页面在哪些流览器测试过这些浏览器的内核分别是什么">1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</h4>
+
+<p>Webkit内核(v8引擎)：谷歌浏览器(chrome) 、 safari、大部分国产浏览器(360、搜狗、QQ、UC、猎豹、百度…)、安卓和IOS大部分手机浏览器… <br>
+Gecko内核：火狐浏览器(firefox) <br>
+Presto内核：欧朋浏览器(opera) <br>
+Trident内核：IE浏览器（IE6 - IE11）</p>
+
+<h4 id="2每个html文件里开头都有个很重要的东西doctype知道这是干什么的吗">2、每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？</h4>
+
+<p>DOCTYPE是document type的简写，它并不是 HTML 标签，也没有结束标签，它是一种标记语言的文档类型声明，即告诉浏览器当前 HTML 是用什么版本编写的。 <br>
+注意: DOCTYPE的声明必须是 HTML 文档的第一行，位于html标签之前。大多数Web文档的顶部都有doctype声明，它是在新建一个文档时，由Web创作软件草率处理的众多细节之一。很少人会去注意 doctype ，但在遵循标准的任何Web文档中，它都是一项必需的元素。doctype会影响代码验证，并决定了浏览器最终如何显示你的 Web文档 <br>
+DOCTYPE是document type(文档类型)的简写，在web设计中用来声明文档类型。  <br>
+在所有 HTML 文档中规定 DOCTYPE 是非常重要的，这样浏览器就能了解预期的文档类型， 告诉浏览器要通过哪一种规范（DTD）解析文档（比如HTML或XHTML规范）。  <br>
+DOCTYPE会影响代码验证，并决定了浏览器最终如何显示你的Web文档。</p>
+
+
+
+<h4 id="3quirks模式是什么它和standards模式有什么区别">3.Quirks模式是什么？它和Standards模式有什么区别？</h4>
+
+<p>在写程序时我们也会经常遇到这样的问题，如何保证原来的接口不变，又提供更强大的功能， <br>
+尤其是新功能不兼容旧功能时。遇到这种问题时的一个常见做法是增加参数和分支， <br>
+即当某个参数为真时，我们就使用新功能，而如果这个参数不为真时，就使用旧功能， <br>
+这样就能不破坏原有的程序，又提供新功能。IE6也是类似这样做的， <br>
+它将DTD（文档类型定义）当成了这个“参数”，因为以前的页面大家都不会去写DTD， <br>
+所以IE6就假定 如果写了DTD，就意味着这个页面将采用对CSS支持更好的布局，而如果没有， <br>
+则采用兼容之前的布局方式。这就是Quirks模式（怪癖模式，诡异模式，怪异模式）。 <br>
+<strong>区别</strong> <br>
+总体会有布局、样式解析和脚本执行三个方面的区别。</p>
+
+<blockquote>
+  <ul><li><p>盒模型：在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在Quirks 模式下，IE的宽度和高度还包含了padding和border。</p></li>
+  <li><p>设置行内元素的高宽：在Standards模式下，给等行内元素设置wdith和height都不会生效，而在quirks模式下，则会生效。</p></li>
+  <li><p>设置百分比的高度：在standards模式下，一个元素的高度是由其包含的内容来决定的，如果父元素没有设置百分比的高度，子元素设置一个百分比的高度是无效的用margin:0 auto设置水平居中：使用margin:0 auto在standards模式下可以使元素水平居中，但在quirks模式下却会失效。</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="4divcss的布局较table布局有什么优点">4.div+css的布局较table布局有什么优点？</h4>
+
+<p><strong>一、div+css布局的好处：</strong></p>
+
+<blockquote>
+  <ul><li><p>1.符合W3C标准，代码结构清晰明了，结构、样式和行为分离，带来足够好的可维护性。</p></li>
+  <li><p>2.布局精准，网站版面布局修改简单。</p></li>
+  <li><p>3.加快了页面的加载速度（最重要的）（在IE中要将整个table加载完了才显示内容）。</p></li>
+  <li><p>4.节约站点所占的空间和站点的流量。</p></li>
+  <li><p>5.用只包含结构化内容的HTML代替嵌套的标签，提高另外搜索引擎对网页的搜索效率。</p></li>
+  </ul>
+</blockquote>
+
+<p><strong>二、table布局的好处（table布局也不是一点用的没有，这点是毋庸置疑的）</strong></p>
+
+<blockquote>
+  <ul><li><p>1.容易上手。</p></li>
+  <li><p>2.可以形成复杂的变化，简单快速。</p></li>
+  <li><p>3.表现上更加“严谨”，在不同浏览器中都能得到很好的兼容。</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="5img的alt与title有何异同-strong与em的异同">5、img的alt与title有何异同？ strong与em的异同？</h4>
+
+<p>alt属性是在你的图片因为某种原因不能加载时在页面显示的提示信息，它会直接输出在原本加载图片的地方 <br>
+title属性是在你鼠标悬停在该图片上时显示一个小提示，鼠标离开就没有了，有点类似jQuery的hover <br>
+但从视觉上效果观看b与strong、i与em是没有区别的,唯一区别是搜索引擎检索的时候搜索引擎可以识别strong、em标签、而不能识别b与i标签 <br>
+建议：为了符合CSS3的规范，b应尽量少用而改用strong ,i应尽量少用而改用em</p>
+
+
+
+<h4 id="6你能描述一下渐进增强和优雅降级之间的不同吗">6.你能描述一下渐进增强和优雅降级之间的不同吗?</h4>
+
+<ul><li><p>渐进增强（progressive enhancement）：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。就是以最低要求，实现最基础功能为基本，向上兼容。以css为例，以下这种写法就是渐进增强。（从被所有浏览器支持的基本功能开始，逐步地添加那些只有新式浏览器才支持的功能，向页面添加无害于基础浏览器的额外样式和功能。当浏览器支持时，它们会自动地呈现出来并发挥作用。） <br>
+.box{ <br>
+-webkit-border-radius:10px; <br>
+-moz- border- radius: 10px; <br>
+border- radius: 10px; <br>
+}</p></li>
+<li><p>优雅降级（graceful degradation）：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。也就是以高要求，高版本为基准，向下兼容。同样以css为例，优雅降级的写法如下。（Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会检查以确认它们是否能正常工作。由于IE独特的盒模型布局问题，针对不同版本的IE的hack实践过优雅降级了，为那些无法支持功能的浏览器增加候选方案，使之在旧式浏览器上以某种形式降级体验却不至于完全失效。） <br>
+.box{ <br>
+border- radius: 10px; <br>
+-moz- border- radius: 10px; <br>
+-webkit- border- radius: 10px; <br>
+}</p></li>
+<li><p>区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的、能够起作用的版本开始，并不断扩充，以适应未来环境的需要。</p></li>
+</ul>
+
+<h4 id="7为什么利用多个域名来存储网站资源会更有效">7、为什么利用多个域名来存储网站资源会更有效？</h4>
+
+<blockquote>
+  <ul><li><p>1.CDN缓存更方便</p></li>
+  <li><p>2.突破浏览器并发限制（一般每个域名建立的链接不超过6个）</p></li>
+  <li><p>3.Cookieless，节省带宽，尤其是上行带宽一般比下行要慢</p></li>
+  <li><p>4.对于UGC的内容和主站隔离，防止不必要的安全问题(上传js窃取主站cookie之类的)。正是这个原因要求用户内容的域名必须不是自己主站的子域名，而是一个完全独立的第三方域名。</p></li>
+  <li><p>5.数据做了划分，甚至切到了不同的物理集群，通过子域名来分流比较省事。这个可能被用的不多。 <br>
+  PS:关于Cookie的问题，带宽是次要的，安全隔离才是主要的。关于多域名，也不是越多越好，虽然服务器端可以做泛解释，浏览器做dns解释也是耗时间的，而且太多域名，如果要走https的话，还有要多买证书和部署的问题。</p></li>
+  </ul>
+</blockquote>
+
+<h4 id="8请谈一下你对网页标准和标准制定机构重要性的理解w3c规范">8、请谈一下你对网页标准和标准制定机构重要性的理解？(W3C规范)</h4>
+
+<p>w3c存在的意义就是让浏览器兼容性问题尽量小，首先是他们对浏览器开发者的约束，然后是对开发者的约束</p></div></body></html>

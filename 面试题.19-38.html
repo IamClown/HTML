@@ -1,0 +1,369 @@
+<!DOCTYPE html><html><head><title>面试题19-38</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h2 id="面试题19-38">面试题19-38</h2>
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#面试题19-38">面试题19-38</a><ul>
+<li><ul>
+<li><a href="#19css中可以通过哪些属性定义使得一个dom元素不显示在浏览器可视范围内">19、CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</a></li>
+<li><a href="#20超链接访问过后hover样式就不出现的问题是什么如何解决">20、超链接访问过后hover样式就不出现的问题是什么？如何解决？</a></li>
+<li><a href="#21什么是css-hackie678的hack分别是什么">21、什么是Css Hack？ie6,7,8的hack分别是什么？</a></li>
+<li><a href="#22请用css写一个简单的幻灯片效果页面">22、请用Css写一个简单的幻灯片效果页面？</a></li>
+<li><a href="#23行内元素和块级元素的具体区别是什么行内元素的padding和margin可设置吗">23、行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</a></li>
+<li><a href="#24写一个表格以及对应的css使表格奇数行为白色背景偶数行为灰色鼠标一上去为黄色背景">24、写一个表格以及对应的CSS,使表格奇数行为白色背景，偶数行为灰色，鼠标一上去为黄色背景。</a></li>
+<li><a href="#25什么是外边距重叠重叠的结果是什么">25、什么是外边距重叠？重叠的结果是什么？</a></li>
+<li><a href="#26rgba和opacity的透明效果有什么不同">26、rgba()和opacity的透明效果有什么不同？</a></li>
+<li><a href="#27css中可以让文字在垂直和水平方向上居中的两个属性是什么">27、css中可以让文字在垂直和水平方向上居中的两个属性是什么？</a></li>
+<li><a href="#28如何垂直居中一个浮动元素">28、如何垂直居中一个浮动元素？</a></li>
+<li><a href="#29px和em的区别">29、px和em的区别？</a></li>
+<li><a href="#30描述一个reset的css文件并如何使用它知道normalizecss吗你了解他们的不同之处">30、描述一个”reset”的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处？</a></li>
+<li><a href="#31sassless是什么大家为什么要使用他们">31、Sass、LESS是什么？大家为什么要使用他们？</a></li>
+<li><a href="#32displaynone与visibilityhidden的区别是什么">32、display:none与visibility:hidden的区别是什么？</a></li>
+<li><a href="#34css中link和import的区别是">34、CSS中link和@import的区别是？</a></li>
+<li><a href="#35简介盒子模型">35、简介盒子模型？</a></li>
+<li><a href="#36为什么要初始化样式">36、为什么要初始化样式？</a></li>
+<li><a href="#37bfc是什么">37、BFC是什么?</a></li>
+<li><a href="#38html语义化是什么">38、html语义化是什么？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h4 id="19css中可以通过哪些属性定义使得一个dom元素不显示在浏览器可视范围内">19、CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？</h4>
+
+<blockquote>
+  <ul><li>display: none 让元素消失</li>
+  <li>font-size：0 字体大小为0</li>
+  <li>width:0; overflow:hidden 宽度为0 而且溢出隐藏</li>
+  <li>height:0; overflow:hidden 高度为0 而且溢出隐藏</li>
+  <li>line-height:0; overflow:hidden 行高为0 而且溢出隐藏</li>
+  <li>visibility: hidden; 可见性的元素隐藏消失</li>
+  <li>opacity: 0; 透明度为0</li>
+  <li>color / background: transparent 字体颜色或者背景颜色为透明</li>
+  <li>text-indent: -9999px; 首段缩进足够大的负值</li>
+  <li>position: absolute; left/top/bottom/right :-9999px; 定位 + 方位的足够大的负值</li>
+  <li>margin-top/bottom/left/right: -9999px; 的四个方位的足够大的负值</li>
+  <li>transform: translateX(-9999px) / translateY(-9999px); 位移坐标值足够大的负值</li>
+  <li>transform: scale(0); 缩放比为0 </li>
+  </ul>
+</blockquote>
+
+<h4 id="20超链接访问过后hover样式就不出现的问题是什么如何解决">20、超链接访问过后hover样式就不出现的问题是什么？如何解决？</h4>
+
+<p>当超链接被点击后，经常会出现hover样式效果不显示的问题。 <br>
+原因：a:visited和a:hover的顺序放错了</p>
+
+<p>解决这个问题其实很简单，只要对超链接的样式属性进行正确的排序即可。</p>
+
+<p>排列顺序如下：</p>
+
+<p>link -&gt; visited -&gt; hover -&gt;action</p>
+
+
+
+<h4 id="21什么是css-hackie678的hack分别是什么">21、什么是Css Hack？ie6,7,8的hack分别是什么？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs awk"><div class="hljs-line">     由于不同厂商的流览器或某浏览器的不同版本（如IE6-IE11,Firefox<span class="hljs-regexp">/Safari/</span>Opera<span class="hljs-regexp">/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时，我们为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器/</span>不同版本写相应的CSS code的过程，叫做CSS hack!
+</div></code></pre>
+
+<p>属性前缀法(即类内部Hack)： <br>
+       例如： IE6能识别下划线”_”和星号” * “， <br>
+                      IE7能识别星号” * “，但不能识别下划线”_”， <br>
+                      IE6~IE10都认识”\9”，但firefox前述三个都不能认识。 <br>
+选择器前缀法(即选择器Hack)： <br>
+       例如：IE6能识别*html .class{}， <br>
+                    IE7能识别<em>+html .class{}或者</em>:first-child+html .class{}。 <br>
+IE条件注释法(即HTML条件注释Hack)：针对所有IE(注：IE10+已经不再支持条件注释)：<code>&lt;!--[if IE]&gt;IE浏览器显示的内容 &lt;![endif]--&gt;</code>， <br>
+     针对IE6及以下版本： <code>&lt;!--[if lt IE 6]&gt;只在IE6-显示的内容 &lt;![endif]--&gt;</code>。 <br>
+     这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。</p>
+
+
+
+<h4 id="22请用css写一个简单的幻灯片效果页面">22、请用Css写一个简单的幻灯片效果页面？</h4>
+
+
+
+<p><code>&lt;!DOCTYPE html&gt;</code> <br>
+<code>&lt;html lang="zh-CN"&gt;</code> <br>
+<code>&lt;head&gt;</code> <br>
+    <code>&lt;meta charset="UTF-8"&gt;</code> <br>
+    <code>&lt;meta name="keywords" content=""&gt;</code> <br>
+   <code>&lt;meta name="description" content=""&gt;</code> <br>
+    <code>&lt;title&gt;珠峰培训&lt;/title&gt;</code> <br>
+  <code>&lt;link rel="icon" href=""&gt;</code> <br>
+   <code>&lt;style type="text/css"&gt;</code> <br>
+        .pic{ <br>
+            width: 400px; <br>
+            height: 400px; <br>
+            margin: 20px auto; <br>
+            background-size: cover; <br>
+            background-position: center; <br>
+            animation: pic 15s infinite; <br>
+        } <br>
+        @-webkit-keyframes pic{ <br>
+            0% {background: url(<a href="http://img4.imgtn.bdimg.com/it/u=2055985622,48496682&amp;fm=11&amp;gp=0.jpg" target="_blank">http://img4.imgtn.bdimg.com/it/u=2055985622,48496682&amp;fm=11&amp;gp=0.jpg</a>) no-repeat;} <br>
+            25% {background: url(<a href="http://img0.imgtn.bdimg.com/it/u=1292725633,1449753653&amp;fm=11&amp;gp=0.jpg" target="_blank">http://img0.imgtn.bdimg.com/it/u=1292725633,1449753653&amp;fm=11&amp;gp=0.jpg</a>) no-repeat;} <br>
+            50% {background: url(<a href="http://img3.imgtn.bdimg.com/it/u=50024599,1799237102&amp;fm=11&amp;gp=0.jpg" target="_blank">http://img3.imgtn.bdimg.com/it/u=50024599,1799237102&amp;fm=11&amp;gp=0.jpg</a>) no-repeat;} <br>
+            75% {background: url(<a href="http://img1.imgtn.bdimg.com/it/u=1102523319,749948224&amp;fm=11&amp;gp=0.jpg" target="_blank">http://img1.imgtn.bdimg.com/it/u=1102523319,749948224&amp;fm=11&amp;gp=0.jpg</a>) no-repeat;} <br>
+            100% {background: url(<a href="http://img5.imgtn.bdimg.com/it/u=1684525795,4027024394&amp;fm=11&amp;gp=0.jpg" target="_blank">http://img5.imgtn.bdimg.com/it/u=1684525795,4027024394&amp;fm=11&amp;gp=0.jpg</a>) no-repeat;} <br>
+        } <br>
+   <code>&lt;/style&gt;</code></p>
+
+
+
+<p><code>&lt;/head&gt;</code> <br>
+<code>&lt;body&gt;</code> <br>
+<code>&lt;div class="pic"&gt;&lt;/div&gt;</code> <br>
+<code>&lt;/body&gt;</code> <br>
+<code>&lt;/html&gt;</code></p>
+
+
+
+<h4 id="23行内元素和块级元素的具体区别是什么行内元素的padding和margin可设置吗">23、行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</h4>
+
+<p><strong>行内元素 span  a    display:inline</strong>  </p>
+
+<blockquote>
+  <ul><li>1.不独占一行，在一行显示</li>
+  <li>2.排列方式：左右水平排列（左右结构）</li>
+  <li>3.在没有设置宽高的情况下，它的宽高： <br>
+   宽度=本身内容的宽度 <br>
+   高度=本身内容的高度</li>
+  <li>4.是否可以设置宽高以及盒子模型的其他属性： <br>
+    设置宽高不起作用 <br>
+    padding-top/bottom 不起作用，但是浏览器可以识别 <br>
+    margin -top,bottom 不起作用</li>
+  <li>5.嵌套注意：行内元素不能嵌套块级元素 <br>
+           特殊：a中可以嵌套块级元素</li>
+  <li>6.默认的间距是否受空格和换行符影响：是</li>
+  </ul>
+</blockquote>
+
+<p><strong>块级元素 div,h1系列,段落  display:block</strong></p>
+
+<blockquote>
+  <ul><li>1.独占一行，不在一行显示</li>
+  <li>2.排列方式：上下垂直排列（上下结构）</li>
+  <li>3.在没有设置宽高的情况下，它的宽高： <br>
+    宽度=父级元素的宽度 <br>
+    高度=父级元素的高度</li>
+  <li>4.是否可以设置宽高以及盒子模型的其他属性： <br>
+    可以设置盒子模型的所有属性</li>
+  <li>5.嵌套注意：块级元素可以嵌套行内元素 <br>
+           特殊：p标签不能嵌套自己的本身 <br>
+                      ul,ol 后面紧跟着只能是li，其它标签只能放在li里面 <br>
+                      同理dl后面紧跟着只能dt和dd</li>
+  <li>6.默认的间距是否受空格和换行符影响：否</li>
+  </ul>
+</blockquote>
+
+<p><strong>行内块元素  img/input/textarea</strong> <br>
+既有行内元素的有特点，又有块级元素的特点</p>
+
+<blockquote>
+  <ul><li>1.display:inline 在一行显示</li>
+  <li>2.可以设置宽高和盒子模型的其他属性</li>
+  <li>3.默认的间距是否受空格和换行符影响：是</li>
+  </ul>
+</blockquote>
+
+
+
+<h4 id="24写一个表格以及对应的css使表格奇数行为白色背景偶数行为灰色鼠标一上去为黄色背景">24、写一个表格以及对应的CSS,使表格奇数行为白色背景，偶数行为灰色，鼠标一上去为黄色背景。</h4>
+
+<p><code>&lt;!DOCTYPE html&gt;</code> <br>
+<code>&lt;html lang="zh-CN"&gt;</code> <br>
+<code>&lt;head&gt;</code> <br>
+    <code>&lt;meta charset="UTF-8"&gt;</code> <br>
+   <code>&lt;meta name="keywords" content=""&gt;</code> <br>
+    <code>&lt;meta name="description" content=""&gt;</code> <br>
+   <code>&lt;title&gt;珠峰培训&lt;/title&gt;</code> <br>
+    <code>&lt;link rel="icon" href=""&gt;</code> <br>
+    <code>&lt;style type="text/css"&gt;</code> <br>
+      body{background: #108b2c;} <br>
+        table{margin: 30px auto;} <br>
+        table td:hover{background: yellow;} <br>
+        tr:nth-child(2n+1){background: #fff;} <br>
+        tr:nth-child(2n){background: #666666;} <br>
+    <code>&lt;/style&gt;</code> <br>
+<code>&lt;/head&gt;</code> <br>
+<code>&lt;body&gt;</code> <br>
+<code>&lt;table border="1" cellpadding="50" cellspacing="0"&gt;</code> <br>
+<code>&lt;caption&gt;奇偶行变色&lt;/caption&gt;</code> <br>
+ <code>&lt;tr&gt;</code> <br>
+       <code>&lt;td&gt;白色&lt;/td&gt;</code> <br>
+        <code>&lt;td&gt;白色&lt;/td&gt;</code> <br>
+        <code>&lt;td&gt;白色&lt;/td&gt;</code> <br>
+  <code>&lt;/tr&gt;</code> <br>
+    <code>&lt;tr&gt;</code> <br>
+        <code>&lt;td&gt;灰色&lt;/td&gt;</code> <br>
+        <code>&lt;td&gt;灰色&lt;/td&gt;</code> <br>
+       <code>&lt;td&gt;灰色&lt;/td&gt;</code> <br>
+   <code>&lt;/tr&gt;</code> <br>
+  <code>&lt;tr&gt;</code> <br>
+        <code>&lt;td&gt;白色&lt;/td&gt;</code> <br>
+        <code>&lt;td&gt;白色&lt;/td&gt;</code> <br>
+        <code>&lt;td&gt;白色&lt;/td&gt;</code> <br>
+    <code>&lt;/tr&gt;</code> <br>
+<code>&lt;/table&gt;</code> <br>
+<code>&lt;/body&gt;</code> <br>
+<code>&lt;/html&gt;</code></p>
+
+
+
+<h4 id="25什么是外边距重叠重叠的结果是什么">25、什么是外边距重叠？重叠的结果是什么？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line">             外边距重叠就是<span class="hljs-attribute">margin</span>-collapse。
+</div><div class="hljs-line">             折叠结果遵循下列计算规则：
+</div><div class="hljs-line">             两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
+</div><div class="hljs-line">             两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+</div><div class="hljs-line">             两个外边距一正一负时，折叠结果是两者的相加的和。
+</div><div class="hljs-line">            (自己实践)
+</div></code></pre>
+
+
+
+<h4 id="26rgba和opacity的透明效果有什么不同">26、rgba()和opacity的透明效果有什么不同？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs gcode"><div class="hljs-line">      rgba<span class="hljs-comment">()</span>和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度，
+</div><div class="hljs-line">      而rgba<span class="hljs-comment">()</span>只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！）
+</div></code></pre>
+
+
+
+<h4 id="27css中可以让文字在垂直和水平方向上居中的两个属性是什么">27、css中可以让文字在垂直和水平方向上居中的两个属性是什么？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs mel"><div class="hljs-line">     水平位置居中可以使用CSS属性<span class="hljs-keyword">text</span>-<span class="hljs-keyword">align</span>来控制
+</div><div class="hljs-line">     垂直属性居中可以使用CSS属性vertical-<span class="hljs-keyword">align</span>: middle;来控制
+</div></code></pre>
+
+
+
+<h4 id="28如何垂直居中一个浮动元素">28、如何垂直居中一个浮动元素？</h4>
+
+<p>父元素有高度）给浮动的元素设置绝对定位，参照物是他的父元素，然后本身向下移动父元素高度的一半，在反向移动本身高度的一半。例： <br>
+        float: left; <br>
+            position: absolute; <br>
+            top: 50%; <br>
+            transform: translate(0,-50%);</p>
+
+
+
+<h4 id="29px和em的区别">29、px和em的区别？</h4>
+
+<p>px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，并且em会继承父级元素的字体大小。 <br>
+任意浏览器的默认字体高都是16px，也就是说1em=16px <br>
+为了简化计算，在css中的body选择器中声明Font-size=62.5%，这就使em值变为16px*62.5%=10px,这样10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。</p>
+
+
+
+<h4 id="30描述一个reset的css文件并如何使用它知道normalizecss吗你了解他们的不同之处">30、描述一个”reset”的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处？</h4>
+
+<p>Reset样式的目的就是清除某些浏览器的默认样式,方便css的书写：例如：*{margin:0;padding:0;list-style:none;} <br>
+normalize的理念与reset的不同，他并不是清除浏览器的默认样式，而是尽量将所有的浏览器的默认样式统一。 <br>
+1、不同的浏览器在对于CSS没有定义的一些样式属性是不一样的， <br>
+比如没有在自己的CSS里面规定超链接有没有下划线的时候，有些浏览器有，有些浏览器没有； <br>
+再比如有一些浏览器规定的超链接默认颜色是蓝色，有一些又是黑色。 <br>
+而这个CSS的功能就是对几乎所有的默认样式进行重置，让所有的浏览器上对于未定义的样式浏览效果达到一致 <br>
+（虽然说无法完全一致，但至少可以消除掉大部分差距） <br>
+同时link两个css的话，会不会有冲突？ <br>
+Normalize.css里面的所有内容放在自己的reset.css的最上面，那样如果有冲突的话，写在后面的CSS设置默认是会覆盖掉写在前面的</p>
+
+
+
+<h4 id="31sassless是什么大家为什么要使用他们">31、Sass、LESS是什么？大家为什么要使用他们？</h4>
+
+
+
+<h4 id="32displaynone与visibilityhidden的区别是什么">32、display:none与visibility:hidden的区别是什么？</h4>
+
+<ul><li>display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏；</li>
+<li>visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局 ；</li>
+<li>display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失</li>
+</ul>
+
+
+
+<h4 id="34css中link和import的区别是">34、CSS中link和@import的区别是？</h4>
+
+<ul><li><p>区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。</p></li>
+<li><p>区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。</p></li>
+<li><p>区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。</p></li>
+<li><p>区别4：ink支持使用Javascript控制DOM去改变样式；而@import不支持。 <br>
+　　</p></li>
+</ul>
+
+
+
+<h4 id="35简介盒子模型">35、简介盒子模型？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs scss"><div class="hljs-line">   盒模型有两种，分别是ie盒子模型（IE6以下版本浏览器)和标准w3c盒子模型 能影响元素的实际大小的只有<span class="hljs-attribute">padding</span>和<span class="hljs-attribute">border</span>值，<span class="hljs-attribute">margin</span>不影响实际大小；
+</div></code></pre>
+
+
+
+<h4 id="36为什么要初始化样式">36、为什么要初始化样式？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs"><div class="hljs-line">   因为浏览器的兼容的问题，不同浏览器有些标签的默认值是不同的，如果没有CSS初始化往往会出现浏览器之间的页面显示差异。
+</div></code></pre>
+
+
+
+<h4 id="37bfc是什么">37、BFC是什么?</h4>
+
+<p>BFC（Block Formatting Context）叫做“块级格式化上下文”； <br>
+       BFC的表现原则 <br>
+       如果一个元素具有BFC，内部子元素再怎么翻江倒海、翻云覆雨，都不会影响外部的元素。 <br>
+        <strong>BFC布局规则</strong></p>
+
+<ul><li>内部的盒子会在垂直方向，一个个地放置；</li>
+<li>2.盒子垂直方向的距离由margin决定，属于同一个BFC的两个相邻Box的上下margin会发生重叠；</li>
+<li>3.每个元素的左边，与包含的盒子的左边相接触，即使存在浮动也是如- 此；</li>
+<li>4.BFC的区域不会与float重叠；</li>
+<li>5.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之也如此；</li>
+<li><p>6.计算BFC的高度时，浮动元素也参与计算；</p>
+
+<p><strong>产生BFC的元素</strong></p></li>
+<li>1.html根元素或其他包含它的元素；</li>
+<li>2.float的属性不为none；</li>
+<li>3.overflow为auto、scroll、hidden；</li>
+<li>4.display为inline-block，table-cell，table-caption中的任何一个；</li>
+<li>5.position为absolute或fixed； <br>
+  <strong>BFC的用处</strong></li>
+<li>1.清除浮动</li>
+<li>2.布局：自适应两栏布局</li>
+<li>3.防止垂直margin合并</li>
+</ul>
+
+
+
+<h4 id="38html语义化是什么">38、html语义化是什么？</h4>
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">   合理的标签做合理的事情
+</div><div class="hljs-line">   为什么要遵循标签语义化？
+</div><div class="hljs-line"><span class="hljs-number">1</span>、利于SEO优化
+</div><div class="hljs-line"><span class="hljs-number">2</span>、在样式丢失的时候，还可以比较好的呈现结构
+</div><div class="hljs-line"><span class="hljs-number">3</span>、更好的支持各种终端。
+</div><div class="hljs-line"><span class="hljs-number">4</span>、利于团队的开发和维护，大家都遵循一个标准，那么代码的差距就会变小
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">我们工作中应该如何遵循标签语义化？
+</div><div class="hljs-line"><span class="hljs-number">1</span>、尽量减少使用无意义的标签，如div和<span class="hljs-selector-tag">span</span>
+</div><div class="hljs-line"><span class="hljs-number">2</span>、尽量不使用标签本身的css属性，如果需要，那就用css写
+</div><div class="hljs-line"><span class="hljs-number">3</span>、在需要强调的部分使用strong和em，但是样式尽量使用css来写
+</div><div class="hljs-line"><span class="hljs-number">4</span>、表格搭建时，使用表格头，表格身体，表格尾
+</div><div class="hljs-line"><span class="hljs-number">5</span>、列表搭建时，使用<span class="hljs-selector-tag">ul</span> li（无序列表）、<span class="hljs-selector-tag">ol</span> li（有序列表）、 <span class="hljs-selector-tag">dl</span> <span class="hljs-selector-tag">dt</span> dd（定义列表）
+</div></code></pre></div></body></html>
